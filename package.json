@@ -1,0 +1,27 @@
+{
+  "name": "user-center",
+  "type": "module",
+  "scripts": {
+    "development": "NODE_ENV=development node app.js",
+    "staging": "NODE_ENV=staging node app.js",
+    "production": "NODE_ENV=production node app.js",
+    "migrate": "npx sequelize db:migrate",
+    "migration:generate": "npx sequelize migration:generate --name",
+    "migrate:undo": "npx sequelize db:migrate:undo"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.0.1",
+    "express-jwt": "^8.5.1",
+    "glob": "^11.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash-es": "^4.17.21",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "sequelize-cli": "^6.6.2"
+  }
+}
