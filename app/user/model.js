@@ -1,8 +1,9 @@
 import { DataTypes } from 'sequelize'
 import { hashSync } from 'bcrypt'
+import { sequelize } from '../db.js'
 
 const saltRounds = 10
-const defineModel = sequelize => sequelize.define('user', {
+const model = sequelize.define('user', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -60,5 +61,5 @@ const defineModel = sequelize => sequelize.define('user', {
 })
 
 export {
-  defineModel
+  model
 }

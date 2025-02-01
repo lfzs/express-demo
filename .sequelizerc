@@ -1,1 +1,1 @@
-export const config = './model/config.json'
+export const config = './config/db.json'
